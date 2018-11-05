@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="webModel/webModel">
+    <body>
+       <div layout:fragment="content" th:remove="tag">
+        <section class="content-header">
+            <div id="weatherBox"> </div>
+        	<div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">文档管理</h3>
+                    <div class="box-tools pull-right">
+                        <span id="picker"><span class="text btn btn-xs btn-success"><i class="fa fa-upload"></i> 上传文件</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+           <div class="container">
+			    <div class="page-header">
+			    	<h3>欢迎登录 </h3>
+			        <h3>电子词典</h3>
+			    </div>
+			    <div class="form-group">
+			    <form id="hzhForm" action="/captcha">
+			      	<input type="text" id="keyword" name="hzh" class="col-sm-4 "  th:value="${name}" placeholder="请输入要翻译单词">
+			        <button id="btn">翻译</button>
+			    </form>
+			      
+			    </div>
+    			<p id="result"></p>
+				<img id="captchasss" alt="" src="/p.png">
+			</div>
+        </section>
+<script th:inline="javascript">
+    $(function () {
+    	$("#captchasss").click(function(){
+    		$(this).attr("src","/p.png?date="+new Date()); 
+    	});
+
+    	$("#btn").click(function(){
+    		$("#hzhForm").submit(); 
+    	});
+	
+        //上传文件
+        var uploader = WebUploader.create({
+            swf: "/static/plugins/webuploader/Uploader.swf",
+            server: "/document/savefile",
+            pick: "#picker",
+            fileVal: "file",
+            formData:{"fid":"dddd"},
+            auto:true
+        });
+
+
+        uploader.on("startUpload",function(){
+            $("#picker .text").html('<i class="fa fa-spinner fa-spin"></i> 上传中...');
+        });
+
+        uploader.on( 'uploadSuccess', function( file,data ) {
+            if(data._raw == "success") {
+                window.history.go(0);
+            }
+        });
+
+        uploader.on( 'uploadError', function( file ) {
+            alert("文件上传失败");
+        });
+
+        uploader.on( 'uploadComplete', function( file ) {
+            $("#picker .text").html('<i class="fa fa-upload"></i> 上传文件').removeAttr("disabled");;
+        });
+
+    });
+</script>
+    </div>
+    
+    </body>
+</html>
+
+

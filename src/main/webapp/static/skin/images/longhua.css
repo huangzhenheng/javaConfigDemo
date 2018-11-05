@@ -1,0 +1,792 @@
+/* 织梦58（dede58.com）做最好的织梦整站模板下载网站 */
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	font-family: "微软雅黑"
+}
+body, h1, h2, h3, h4, h5, ul, li, dl, dt, dd, input {
+	margin: 0;
+	padding: 0;
+}
+img {
+	border: none;
+}
+a, ul, li, h1, h2, dl, dt, dd {
+	list-style: none;
+	text-decoration: none;
+}
+.h-top {
+	background-color: #e9e9e9;
+	height: 24px;
+}
+.header {
+	width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+.fl {
+	color: #7b7a7a;
+	font-size: 12px;
+	float: left;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+}
+.top-right {
+	float: right;
+	width: 173px;
+	color: #7b7a7a;
+	font-size: 12px;
+}
+.top-right a {
+	display: inline;
+	color: #7b7a7a;
+	font-size: 12px;
+	margin-right: 5px;
+	line-height: 24px;
+}
+.h-con {
+	height: 104px;
+	padding-top: 26px;
+	width: 1100px;
+	margin: 0 auto
+}
+.h-con h1 {
+	float: left;
+	background: url(../images/xx.png) no-repeat right center;
+	width: 116px;
+	height: 84px;
+}
+.h-bt {
+	float: left;
+	padding-left: 24px;
+	padding-top: 18px;
+}
+.h-pho {
+	float: right;
+	margin-top: 24px;
+	font-size: 14px;
+	color: #222;
+	background: url(../images/xxx.png) no-repeat center 2px;
+	text-align: center;
+	line-height: 14px;
+	padding-bottom: 20px;
+}
+.h-pho span {
+	color: #222;
+	font-size: 24px;
+	display: block;
+	padding-top: 10px;
+}
+.nav-box {
+	height: 50px;
+	background: #b51a20
+}
+.nav {
+	height: 50px;
+	color: white;
+	width: 1100px;
+	margin: 0 auto
+}
+.nav ul {
+	width: 1100px;
+	overflow: hidden;
+	height: 50px;
+}
+.nav ul li {
+	float: left;
+	width: 137px;
+	height: 50px;
+}
+.nav ul li a {
+	font-size: 16px;
+	color: white;
+	line-height: 50px;
+	width: 137px;
+	text-align: center;
+	height: 50px;
+	display: block
+}
+.nav ul li a:hover {
+	background: #353639
+}
+.n-cur {
+	background: #353639
+}
+.nav-banner {
+	position: relative;
+	margin: 0 auto;
+	height: 500px;
+	overflow: hidden;
+	width: 100%;
+}
+.banner {
+	width: 1920px;
+	height: 500px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -960px;
+}
+.banner ul {
+	width: 1920px;
+	height: 500px;
+}
+.banner ul li {
+	width: 1920px;
+	height: 500px;
+}
+.banner ul li img {
+	width: 1920px;
+	height: 500px;
+}
+.small {
+	position: absolute;
+	left: 50%;
+	bottom: 12%;
+	cursor: pointer;
+	margin-left: 0px
+}
+.small a {
+	width: 40px;
+	height: 4px;
+	background: white;
+	float: left;
+	margin: 0 8px;
+}
+.small .small_s {
+	background: #353639;
+	width: 40px;
+	height: 4px
+}
+.s-bg {
+	background: url(../images/sea.png);
+	height: 42px;
+	font-size: 12px;
+}
+.h-ser {
+	width: 1100px;
+	margin: 0 auto;
+	overflow: hidden
+}
+.h-ser p {
+	float: left;
+	width: 670px;
+	overflow: hidden;
+	color: #333;
+	height: 39px;
+	margin: 9px
+}
+.h-ser b {
+	color: #333;
+	font-weight: bold
+}
+.h-ser p a {
+	padding: 0 6px;
+	display: inline-block;
+	color: #666;
+}
+.s-inp {
+	width: 255px;
+	margin-top: 7px;
+	float: right
+}
+.inp01 {
+	background: url(../images/s_inp.gif) no-repeat;
+	width: 170px;
+	height: 21px;
+	line-height: 21px;
+	border: none;
+	padding: 0 3px 0 27px;
+	float: left;
+}
+.fl {
+	float: left;
+}
+.he-box {
+	background: #f3f2f2;
+	margin: 0 auto;
+	clear: both;
+	padding-top: 30px
+}
+.he-box h2 {
+	width: 1100px;
+	height: 56px;
+	background: url(../images/he-nav.png);
+	margin: 0 auto
+}
+.he-b {
+	width: 1100px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.he-b .mr_box {
+	height: 140px;
+}
+.he {
+	width: 1100px;
+	height: 140px;
+	float: left;
+	overflow: hidden;
+	padding-top: 20px;
+	margin-left: 2px
+}
+.he ul {
+	overflow: hidden
+}
+.he ul li {
+	float: left;
+	width: 198px;
+	height: 78px;
+	overflow: hidden;
+	display: inline;
+	margin: 0 10px;
+	border: 1px solid #bfbfbf;
+}
+.he ul li a {
+	width: 198px;
+	height: 78px;
+}
+.he ul li a img {
+	width: 198px;
+	height: 78px;
+}
+.pro-box {
+	width: 1100px;
+	margin: 0 auto;
+	clear: both;
+	height: 670px
+}
+.pro-box h2 {
+	width: 1100px;
+	height: 58px;
+	background: url(../images/pro-nav.png);
+	margin: 0 auto
+}
+.product {
+	width: 1100px;
+	overflow: hidden;
+	padding-top: 24px
+}
+.pro-left {
+	float: left;
+	width: 200px;
+	height: 540px;
+	background: url(../images/pro-di.png) no-repeat bottom center
+}
+.pro-left dl {
+	border: 1px solid #bfbfbf;
+	width: 198px;
+	height: 538px
+}
+.pro-left dl dt {
+	width: 198px;
+	height: 100px
+}
+.pro-left dl dt h3 {
+	background: url(../images/pro-b.png);
+	width: 198px;
+	height: 100px
+}
+.pro-left dl dd {
+	background: url(../images/zx_h3.gif);
+	width: 198px;
+	height: 39px;
+}
+.pro-left dl dd a {
+	font-size: 14px;
+	color: #333333;
+	line-height: 39px;
+	padding-left: 24px;
+	width: 174px;
+	display: block
+}
+.pro-right {
+	width: 870px;
+	float: right
+}
+.pro-right ul {
+	width: 870px;
+	overflow: hidden
+}
+.pro-right ul li {
+	width: 278px;
+	height: 248px;
+	border: 1px solid #bfbfbf;
+	float: left;
+	margin: 0 5px;
+	margin-bottom: 40px
+}
+.pro-right ul li a {
+	width: 278px;
+	height: 248px;
+	display: block
+}
+.pro-right ul li a img {
+	width: 278px;
+	height: 218px;
+	display: block
+}
+.pro-right ul li a span {
+	width: 278px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #575757;
+	text-align: center;
+	display: block
+}
+.tong1-box {
+	position: relative;
+	margin: 0 auto;
+	height: 176px;
+	overflow: hidden;
+	width: 100%;
+}
+.tong1 {
+	width: 1920px;
+	height: 176px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -960px;
+	background: url(../images/tong1.png)
+}
+.t1 {
+	width: 1100px;
+	height: 176px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.t1 a {
+	float: right;
+	margin-top: 120px;
+	width: 144px;
+	height: 32px;
+	background: url(../images/t-zi.png)
+}
+.you-box {
+	position: relative;
+	margin: 0 auto;
+	height: 1460px;
+	overflow: hidden;
+	width: 100%;
+}
+.you-b {
+	width: 1920px;
+	height: 1460px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -960px;
+	background: url(../images/youshi-di.jpg)
+}
+.youshi {
+	width: 1100px;
+	height: 1460px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative
+}
+.youshi dl {
+	position: absolute;
+	width: 440px;
+}
+.youshi dl dt {
+	margin-bottom: 20px
+}
+.youshi dl dd {
+	width: 440px;
+	font-size: 15px;
+	color: #454545;
+	line-height: 30px
+}
+.you01 {
+	top: 350px;
+	right: 0
+}
+.you02 {
+	left: 0;
+	top: 640px
+}
+.you03 {
+	top: 932px;
+	right: 0
+}
+.you04 {
+	left: 0;
+	top: 1200px
+}
+.tong2-box {
+	position: relative;
+	margin: 0 auto;
+	height: 176px;
+	overflow: hidden;
+	width: 100%;
+}
+.tong2 {
+	width: 1920px;
+	height: 178px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -960px;
+	background: url(../images/t2.png)
+}
+.t2 {
+	width: 1100px;
+	height: 178px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.t2 a {
+	float: right;
+	margin-top: 100px;
+	width: 141px;
+	height: 35px;
+	background: url(../images/t1-zi.png)
+}
+.anli {
+	width: 1100px;
+	margin: 0 auto
+}
+.anli h2 {
+	width: 1100px;
+	height: 58px;
+	background: url(../images/an-nav.png);
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 20px
+}
+.anli ul {
+	width: 1100px;
+	overflow: hidden
+}
+.anli ul li {
+	width: 340px;
+	height: 240px;
+	float: left;
+	margin: 10px 13px;
+}
+.anli ul li a {
+	width: 340px;
+	height: 240px;
+	display: block;
+	position: relative
+}
+.anli ul li img {
+	width: 340px;
+	height: 240px;
+	display: block
+}
+.anli ul li span {
+	width: 340px;
+	height: 240px;
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	background: url(../images/an-di.png);
+	line-height: 240px;
+	text-align: center;
+	color: white;
+	font-size: 16px
+}
+.abo-box {
+	width: 1100px;
+	margin: 0 auto
+}
+.abo-box h2 {
+	width: 1100px;
+	height: 58px;
+	background: url(../images/abo-nav.png);
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 20px
+}
+.abo {
+	width: 1100px;
+	overflow: hidden;
+	padding-top: 20px;
+	border-bottom: 1px solid #cfcfcf;
+	padding-bottom: 40px
+}
+.abo-tu {
+	float: left;
+	width: 438px;
+	height: 282px;
+	margin-right: 18px;
+}
+.m-wz {
+	float: left;
+	width: 644px;
+	padding-top: 10px
+}
+.m-wz h3 {
+	margin-bottom: 10px;
+	height: 44px;
+	line-height: 22px;
+	overflow: hidden;
+}
+.m-wz h3 a {
+	color: #333333;
+	font-size: 16px;
+}
+.m-wz h3 em {
+	display: block;
+	color: #c8161d;
+	font-weight: normal;
+	font-style: normal;
+}
+.m-wz p {
+	color: #555555;
+	font-size: 13px;
+	line-height: 26px;
+	height: 200px;
+	overflow: hidden;
+	margin-top: 16px
+}
+.m-wz p a {
+	color: #c8161d;
+}
+.zixun {
+	width: 1100px;
+	margin: 0 auto;
+	overflow: hidden;
+	height: 420px;
+	margin-top: 30px
+}
+.zi-l {
+	float: left;
+	width: 335px;
+	margin-right: 47px;
+	overflow: hidden
+}
+.zi-l h2 {
+	height: 38px;
+	line-height: 38px;
+	background: url(../images/line3.jpg) no-repeat left 14px;
+	padding-left: 15px;
+	margin-bottom: 28px;
+}
+.zi-l h2 a {
+	color: #333333;
+	font-size: 18px;
+	font-weight: 600;
+}
+.zi-l h2 .more1 {
+	float: right;
+	line-height: 38px
+}
+.zi-l h2 .more1 a {
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 38px;
+	color: #666;
+	font-weight: normal
+}
+.zi-l h2 em {
+	color: #555555;
+	font-size: 12px;
+	font-weight: normal;
+	text-transform: uppercase;
+	display: inline-block;
+	padding-left: 5px;
+}
+.lst4 li {
+	height: 40px;
+	line-height: 40px;
+	padding-left: 18px;
+	background: url(../images/dtico.jpg) no-repeat 6px center;
+	overflow: hidden;
+}
+.lst4 li a {
+	color: #555555;
+	font-size: 13px
+}
+.wend {
+	float: left;
+	width: 335px;
+	overflow: hidden;
+}
+.wend h2 {
+	height: 38px;
+	line-height: 38px;
+	background: url(../images/line3.jpg) no-repeat left 14px;
+	padding-left: 15px;
+	margin-bottom: 28px;
+}
+.wend h2 a {
+	color: #333333;
+	font-size: 18px;
+	font-weight: 600;
+}
+.wend h2 .more1 {
+	float: right;
+	line-height: 38px
+}
+.wend h2 .more1 a {
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 38px;
+	color: #666;
+	font-weight: normal
+}
+.wend h2 em {
+	color: #555555;
+	font-size: 12px;
+	font-weight: normal;
+	text-transform: uppercase;
+	display: inline-block;
+	padding-left: 5px;
+}
+.wend dl {
+	border-top: 1px dashed #cecece;
+	height: 90px;
+	padding: 20px 0 0 0;
+}
+.wend dt {
+	height: 19px;
+	padding-left: 25px;
+	line-height: 19px;
+	background: url(../images/q.png) no-repeat left 3px;
+	font-size: 12px;
+	color: #c8161d;
+	overflow: hidden;
+}
+.wend dt a {
+	color: #c8161d;
+	font-weight: bold;
+}
+.wend dd {
+	margin-top: 8px;
+	padding-left: 25px;
+	background: url(../images/a.png) no-repeat left 3px;
+	line-height: 24px;
+	font-size: 12px;
+	color: #555555;
+	height: 48px;
+	overflow: hidden;
+}
+.yq-box {
+	background: #f3f3f3;
+	padding-top: 30px
+}
+.yq {
+	width: 1100PX;
+	margin: 0 auto;
+}
+.yq-top {
+	border-bottom: 1PX solid #CCC;
+	height: 35px;
+}
+.yq-top span {
+	float: right;
+}
+.yq-top span a {
+	color: #666;
+	font-size: 12px;
+}
+.yq-top h3 a {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	font-weight: normal;
+	color: #999
+}
+.yq-con {
+	padding: 10px;
+	line-height: 30px;
+}
+.yq-con a {
+	padding: 0 10px;
+	color: #666;
+	font-size: 12px
+}
+.foot-box {
+	background: url(../images/f-di.png) repeat-x;
+	height: 365px;
+}
+.footer {
+	width: 1100px;
+	margin: 0 auto
+}
+.f-top {
+	overflow: hidden
+}
+.f-f {
+	padding: 18px 0 0 18px;
+	height: 170px;
+	width: 194px;
+	float: left
+}
+.f-f h3 {
+	height: 45px;
+}
+.f-f h3 span {
+	padding-right: 5px;
+}
+.f-f h3 span a {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #fff;
+	font-weight: normal;
+}
+.f-f h3 em {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #d87175;
+	font-weight: normal;
+	font-style: normal
+}
+.f-f p {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #fff;
+}
+.f-f .p1 {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	font-weight: 600
+}
+.f-f ul li {
+	height: 24px;
+}
+.f-f ul li a {
+	color: #fff;
+	font-size: 13px
+}
+.f-f1 {
+	padding: 18px 0 0 18px;
+	height: 170px;
+	width: 220px;
+	float: left
+}
+.f-f1 p img {
+	float: left;
+	margin: 0px 6px 0 0
+}
+.f-con {
+	background: url(../images/f_yy.gif) no-repeat 0 0;
+	width: 1100px;
+	margin: 0 auto
+}
+.f-img {
+	float: left;
+	padding: 35px 30px 0 60px;
+}
+.f-p {
+	line-height: 20px;
+	padding: 35px 0 0;
+	float: left
+}
+.f-p p {
+	font-size: 13px;
+	color: #494949;
+	margin: 0;
+}
+.f-p p a {
+	font-size: 13px;
+	color: #494949;
+}

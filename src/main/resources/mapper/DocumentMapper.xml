@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hzh.dao.DocumentMapper">
+
+<!--     <cache/> -->
+
+ 
+
+    <select id="findAllFile" resultType="Document">
+        SELECT * FROM t_document
+    </select>
+  
+  	<select id="findByFileFid" resultType="Document">
+        SELECT * FROM t_document  WHERE fid = #{fid}
+    </select>
+  
+   <select id="findByid" resultType="Document">
+        SELECT * FROM t_document  WHERE id=#{fid}
+   </select>
+    
+    <insert id="saveDocument">
+     	INSERT INTO t_document(name,size,type,filename,contexttype,groupName,fid)
+     	VALUES (#{name},#{size},#{type},#{filename},#{contexttype},#{groupName},#{fid})
+    </insert>
+    
+    <delete id="delFileById">
+    	delete from t_document WHERE id=#{id}
+    </delete>
+ 
+             
+</mapper>
