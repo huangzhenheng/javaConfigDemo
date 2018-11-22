@@ -57,7 +57,7 @@ public class RootConfig {
 		// 初始化配置
 		try {
 			Properties props = new Properties();
-			props.put(ClientGlobal.PROP_KEY_TRACKER_SERVERS, "192.168.200.130:22122");
+			props.put(ClientGlobal.PROP_KEY_TRACKER_SERVERS, "123.206.88.207:22122");
 			ClientGlobal.initByProperties(props);
 		} catch (IOException e) {
 			e.printStackTrace();

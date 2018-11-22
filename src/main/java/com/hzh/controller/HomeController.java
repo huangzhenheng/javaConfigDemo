@@ -26,7 +26,7 @@ import com.hzh.pojo.User;
 
 //@RestController  @RestController注解相当于@ResponseBody ＋ @Controller合在一起的作用
 @Controller
-public class HomeController {
+public class HomeController extends BaseController{
 
 	@RequestMapping(value = "/home2", method = RequestMethod.GET)
 	public String home2() {
@@ -94,7 +94,7 @@ public class HomeController {
 		outputStream.flush();
 		outputStream.close();
 
-		return "success";
+		return SUCCESS;
 	}
 
 	@RequestMapping("/captcha")

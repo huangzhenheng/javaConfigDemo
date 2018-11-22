@@ -36,10 +36,10 @@ public class JedisStringTestCase {
 		map.put("sds", 11);
 		
 		
-		 //JedisUtil3.setObject("gdgssdh", map); 
+		 JedisUtil3.setObject("gdgssdh", map);
 		 
 	 
-		System.err.println(JedisUtil3.del("gdgsssssdh","gdgssdsh"));
+
 	}
 
  

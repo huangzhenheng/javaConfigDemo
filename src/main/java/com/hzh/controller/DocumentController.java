@@ -8,6 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.URLEncoder;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -47,7 +48,7 @@ import com.hzh.util.FileUtil;
 
 @Controller
 @RequestMapping("/document")
-public class DocumentController {
+public class DocumentController extends BaseController{
 
 	@Autowired
 	private StorageClient storageClient;
@@ -70,39 +71,63 @@ public class DocumentController {
 	}
 
 	/**
-	 * 下载文件
+	 * 下载文件简单实例
 	 * 
-	 * @param id
+	 * @param id 文档的
 	 * @return
 	 * @throws Exception
 	 */
 	@RequestMapping(value = "/{id:\\d+}/download", method = RequestMethod.GET)
-	public ResponseEntity<InputStreamResource> downloadFile(@PathVariable Integer id, HttpServletResponse response)
+	public ResponseEntity<byte[]> downloadFile(@PathVariable Integer id, HttpServletResponse response)
 			throws Exception {
 
+		//查找文件
 		Document document = documentService.findByid(id);
 		if (document == null) {
 			throw new NotFoundException();
 		}
 
-		//FileInfo fileInfo = storageClient.get_file_info(document.getGroupName(), document.getFilename());
 		byte[] bytes = storageClient.download_file(document.getGroupName(), document.getFilename());
- 
-		// TODO 根据文件类型来选择相应的输入流
-		// 图片
-		ByteArrayInputStream in = new ByteArrayInputStream(bytes);
-
-		// 文档
-		// InputStream inputStream = IOUtils.toInputStream(new String(bytes,
-		// "UTF-8"));
-
 		String fileName = new String(document.getName().getBytes("UTF-8"), "ISO8859-1");
 
 		return ResponseEntity.ok().contentType(MediaType.parseMediaType(document.getContexttype()))
 				.contentLength(bytes.length)
 				.header("Content-Disposition", "attachment;filename=\"" + fileName + "\"")
-				.body(new InputStreamResource(in));
+				.body(bytes);
+
 	}
+
+
+	@RequestMapping(value = "/{id:\\d+}/viewPdf", method = RequestMethod.GET)
+	@ResponseBody
+	public void viewPdfContractSign(HttpServletResponse response,@PathVariable Integer id) throws IOException, MyException {
+		response.reset();
+		response.setContentType("application/pdf");
+		Document document = documentService.findByid(id);
+		if (document == null) {
+			throw new NotFoundException();
+		}
+
+		byte[] bytes = storageClient.download_file(document.getGroupName(), document.getFilename());
+
+		String fileName = new String(document.getName().getBytes("UTF-8"), "ISO8859-1");
+
+
+		try (OutputStream out = response.getOutputStream()) {
+
+
+
+				response.setHeader("Content-Disposition",
+						"inline; filename=\"" + fileName + "\"");
+				out.write(bytes);
+				out.flush();
+
+		} catch (Throwable e) {
+
+		}
+
+	}
+
 
 	@RequestMapping(value = "/del/{fid:\\d+}/{id:\\d+}", method = RequestMethod.GET)
 	public String delFile(@PathVariable Integer id, @PathVariable Integer fid) throws Exception {
@@ -152,7 +177,7 @@ public class DocumentController {
 			documentService.saveDocument(document);
 
 		}
-		return "success";
+		return SUCCESS;
 	}
 
 }
