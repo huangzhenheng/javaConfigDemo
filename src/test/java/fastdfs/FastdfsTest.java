@@ -41,7 +41,7 @@ public class FastdfsTest {
 
 
 	@Test
-	public void guavaTest() throws IOException, MyException {
+	public void fastdfsTest() throws IOException, MyException {
 		InputStream inputStream=new FileInputStream(new File("D:\\es6标准入门.pdf"));
 		byte[] bytes = IOUtils.toByteArray(inputStream);
 		String[] strings =  storageClient().upload_file(bytes,  "pdf", null);
@@ -55,7 +55,7 @@ public class FastdfsTest {
 		// 初始化配置
 		try {
 			Properties props = new Properties();
-			props.put(ClientGlobal.PROP_KEY_TRACKER_SERVERS, "123.206.88.207:22122");
+			props.put(ClientGlobal.PROP_KEY_TRACKER_SERVERS, "192.168.2.128:22122");
 			ClientGlobal.initByProperties(props);
 		} catch (IOException e) {
 			e.printStackTrace();

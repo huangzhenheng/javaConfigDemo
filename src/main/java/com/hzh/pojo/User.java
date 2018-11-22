@@ -9,6 +9,14 @@ public class User implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
+	public User() {
+
+	}
+
+	public User(String name) {
+		this.name = name;
+	}
+
 	private String name;
 
 	public String getName() {
